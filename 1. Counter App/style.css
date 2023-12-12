@@ -74,13 +74,13 @@ img {
   cursor: pointer;
 }
 
-button.subtract {
+button.decrease {
   background-color: orangered;
 }
 button.reset {
   background-color: var(--white);
   color: var(--black);
 }
-button.add {
+button.increase {
   background-color: green;
 }

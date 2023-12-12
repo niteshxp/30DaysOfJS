@@ -1,15 +1,15 @@
-const add = document.querySelector(".add");
+const increase = document.querySelector(".increase");
 const resetCount = document.querySelector(".reset");
-const sub = document.querySelector(".subtract");
+const decrease = document.querySelector(".decrease");
 const count = document.querySelector(".count");
 const buttons = document.querySelector(".buttons");
 
 buttons.addEventListener("click", (e) => {
-    if (e.target.classList.contains("add")) {
+    if (e.target.classList.contains("increase")) {
         count.innerHTML++;
         setColor();
     }
-    if (e.target.classList.contains("subtract")) {
+    if (e.target.classList.contains("decrease")) {
         count.innerHTML--;
         setColor();
     }
@@ -28,13 +28,3 @@ function setColor() {
         count.style.color = "#fff";
     }
 }
-
-add.addEventListener("click", () => {
-    count.innerHTML++;
-});
-sub.addEventListener("click", () => {
-    count.innerHTML--;
-});
-resetCount.addEventListener("click", () => {
-    count.innerHTML = 0;
-});
