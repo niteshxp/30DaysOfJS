@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(232, 227, 222);
+    color: rgb(113, 50, 2);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#container {
+    background-color:black;
+    height: 15rem;
+    width: 25rem;
+    padding: 1rem 2rem 2rem 1rem;
+    margin-top: 10rem;
+    border-radius: 5px;
+}
+
+#title{
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+#description{
+    color: beige;
+    margin-bottom: 10px;
+}
+#author{
+    color: burlywood;
+    margin-bottom: 20px;
+}
+#btn{
+    padding: 2px;
+    border-radius: 50px;
+    height: 2rem;
+    width: 8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
