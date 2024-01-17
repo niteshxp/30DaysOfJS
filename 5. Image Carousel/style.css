@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  height: 400px;
+  background-size:cover;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Navigation buttons styling */
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prevBtn {
+  left: -30px;
+}
+#nextBtn {
+   right: -30px; 
+}
