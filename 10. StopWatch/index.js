@@ -4,8 +4,17 @@ const reset = document.getElementById("reset");
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
+let isStopWatchRunning = false;
 
 function startTimer() {
+    if (isStopWatchRunning) {
+        clearInterval(timer);
+        seconds = 0
+        hours = 0
+        minutes = 0
+    }
+
+    isStopWatchRunning = true;
     timer = setInterval(() => {
         if (seconds < 59) {
             seconds++;
@@ -20,16 +29,17 @@ function startTimer() {
         document.getElementById("display").innerText = String(hours).padStart(2, "0") + ":" + String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 
     }, 1000);
-
 }
 
 function stopTimer() {
-    clearInterval(timer);
-
+    if (isStopWatchRunning) {
+        clearInterval(timer);
+        isStopWatchRunning = false;
+    }
 }
 
 function resetTimer() {
-    clearInterval(timer);
+    stopTimer();
     seconds = 0
     hours = 0
     minutes = 0
