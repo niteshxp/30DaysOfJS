@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boxes.addEventListener("click", (e) => {
         let box = (e.target)
         let cellnumber = box.getAttribute("data-cell")
+
         if (box.getAttribute("data-clicked")) {
             return
         }
@@ -15,17 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (chance === false && !result[0].textContent.includes("wins")) {
             box.textContent = "X"
+            box.style.color = "Brown"
             arr[cellnumber] = "X"
             getMatch('X')
         } else {
             if (result[0].textContent.includes("wins")) { return }
             box.textContent = "O"
+            box.style.color = "Orange"
             arr[cellnumber] = "O"
             getMatch('O')
 
         }
         chance = !chance
-        console.log(arr);
+        // console.log(arr);
     })
 
     function getMatch(char) {
@@ -47,5 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
             result[0].textContent = `${char} wins!`
         }
     }
-
 })
