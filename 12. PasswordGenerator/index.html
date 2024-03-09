@@ -7,10 +7,35 @@
     <title>Password Generator</title>
   </head>
   <body>
+    <h1>Password Generator</h1>
+    <div>
+      <label for="number">
+        Number
+        <input id="number" type="checkbox" />
+      </label>
 
+      <label for="special">
+        Special
+        <input id="special" type="checkbox" />
+      </label>
 
+      <label for="length">
+        length
+        <input
+          type="range"
+          max="16"
+          min="8"
+          value=""
+          name="length"
+          id="length"
+        />
+      </label>
 
-    
+      <button>Generate</button>
+
+      <h4>Password : <span></span></h4>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
